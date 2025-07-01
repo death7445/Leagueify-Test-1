@@ -1,0 +1,9 @@
+import { test, expect } from '@playwright/tests1';
+
+// filepath: Tests/.testConnection
+
+
+test('should load leagueify.org and have correct title', async ({ page }) => {
+    await page.goto('https://leagueify.org');
+    await expect(page).toHaveTitle(/Leagueify/);
+});
