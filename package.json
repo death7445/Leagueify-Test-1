@@ -1,0 +1,22 @@
+{
+  "name": "leagueify-test-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/death7445/Leagueify-Test-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/death7445/Leagueify-Test-1/issues"
+  },
+  "homepage": "https://github.com/death7445/Leagueify-Test-1#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.9"
+  }
+}
