@@ -17,6 +17,7 @@
   "homepage": "https://github.com/death7445/Leagueify-Test-1#readme",
   "devDependencies": {
     "@playwright/test": "^1.53.2",
-    "@types/node": "^24.0.9"
+    "@types/node": "^24.0.9",
+    "jest": "^30.0.3"
   }
 }
