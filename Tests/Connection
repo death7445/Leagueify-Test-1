@@ -1,27 +1,7 @@
-// This file should run the tests for the connectToWebsite function to leagueify.org
-const { connectToWebsite } = require('../src/index');
-const axios = require('axios');
 
-jest.mock('axios');
+import { test, expect } from '@playwright/test';
 
-describe('connectToWebsite', () => {
-    it('should connect to a valid website and return response', async () => {
-        const url = 'http://leagueify.org';
-        const responseData = { data: 'response data' };
-        
-        axios.get.mockResolvedValue(responseData);
-        
-        const response = await connectToWebsite(url);
-        
-        expect(response).toEqual(responseData);
-        expect(axios.get).toHaveBeenCalledWith(url);
-    });
-
-    it('should throw an error for an invalid website', async () => {
-        const url = 'https://Leagueify.org/invalid';
-        
-        axios.get.mockRejectedValue(new Error('Network Error'));
-        
-        await expect(connectToWebsite(url)).rejects.toThrow('Network Error');
-    });
+test.only('connect to leagueify.org', async ({ page }) => {
+    await page.goto('https://leagueify.org');
+    await expect(page).toHaveTitle(/Leagueify/);
 });
